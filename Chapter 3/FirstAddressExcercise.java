@@ -1,7 +1,9 @@
 public class FirstAddressExcercise {
 
    public static void main(String[] a) {
-   
+
+      System.out.println("First Java Application");
+      
       //calling the static method which displays the address of the chosen phone brand
       displayAddress(); 
       
