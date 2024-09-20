@@ -6,12 +6,13 @@ public class FirstAddressExcercise {
       
       //calling the static method which displays the address of the chosen phone brand
       displayAddress(); 
-      
+
+      //Additional Creations
       //creating an instance of the class to be able to call a non-static method
-      FirstAddressExcercise firstAddressExercise = new FirstAddressExcercise();
+      //FirstAddressExcercise firstAddressExercise = new FirstAddressExcercise();
       
       //calling the non-static method with the use of the class instance
-      firstAddressExercise.displayBranch();
+      //firstAddressExercise.displayBranch();
    }
    
    //a static method that contains the details of the address
