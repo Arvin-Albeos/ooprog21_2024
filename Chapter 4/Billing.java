@@ -9,7 +9,9 @@
 import java.util.*;
 
 public class Billing {
-
+   //declaration of a global variable that will be used by multiple methods
+   private static double WITH_TAX = 1.08;
+   
    //Inside the main method, call each computeBill method with appropriate arguments
    public static void main(String[] a) {
       Scanner sc = new Scanner(System.in);
@@ -28,7 +30,6 @@ public class Billing {
    
    //Method that takes a single double parameter for price.
    public static void computeBill(double price) {
-      double WITH_TAX = 1.08;
       
       double fPrice = price * WITH_TAX;
       System.out.printf("The total bill of the item with tax is: $%.3f", fPrice);
@@ -36,7 +37,6 @@ public class Billing {
    
    //One that takes a double for price and an int for quantity.
    public static void computeBill(double price, int quantity) {
-      double WITH_TAX = 1.08;
       
       double fPrice = ((price * quantity) * WITH_TAX);
       System.out.printf("\nThe total bill of %d items with tax is: $%.3f", quantity,fPrice);
@@ -45,17 +45,14 @@ public class Billing {
    
    //One that takes a double for price, an int for quantity, and an int for a coupon discount.
    public static void computeBill(double price, int quantity, int couponDisc) {
-      double WITH_TAX = 1.08; 
-          //if we make the coupon discount in percent-based use with the code below
           
+          //if we make the coupon discount in percent-based use with the code below
             double disc = couponDisc/100.00;
             double totalDisc = (price * quantity) * disc;
             //Note: use totalDisc instead of couponDisc in the process below
             //Note: if you want to use the integer only coupon discount then only use couponDisc in the process below
             
       double fPrice = (((price * quantity) - totalDisc) * WITH_TAX);
-      
-      
       System.out.printf("\nThe total bill of %d items with the tax, minus the %d%% coupon discount is: $%.3f", quantity, couponDisc,fPrice);
    }
 }
